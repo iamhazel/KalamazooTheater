@@ -27,6 +27,6 @@ else
 	{
 		string sql = "SELECT * FROM organization";
 
-		organizations = await _data.LoadData<OrganizationModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+		organizations = await _data.LoadData<OrganizationModel, dynamic>(sql, new { }, _config.GetConnectionString("Default"));
 	}
 }
