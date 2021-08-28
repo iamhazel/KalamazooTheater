@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalamazooTheater", "KalamazooTheater\KalamazooTheater.csproj", "{04E4A6F9-3CA3-4FB3-B4FC-61EAD19CA6C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{69E2AE06-C001-4485-AF0D-38D7B6F6305D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{04E4A6F9-3CA3-4FB3-B4FC-61EAD19CA6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04E4A6F9-3CA3-4FB3-B4FC-61EAD19CA6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04E4A6F9-3CA3-4FB3-B4FC-61EAD19CA6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E2AE06-C001-4485-AF0D-38D7B6F6305D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E2AE06-C001-4485-AF0D-38D7B6F6305D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E2AE06-C001-4485-AF0D-38D7B6F6305D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E2AE06-C001-4485-AF0D-38D7B6F6305D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
