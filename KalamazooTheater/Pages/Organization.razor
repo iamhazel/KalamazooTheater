@@ -6,22 +6,38 @@
 @inject IDataAccess _data
 @inject IConfiguration _config
 
-<h3>Organizations</h3>
+<h1>Organizations</h1>
 
-@if (organizations == null)
-{
-	<p><em>Loading...</em></p>
-}
-else
-{
-	@foreach (var o in organizations)
-	{
-		<p>@o.Name, @o.Website, @o.Organization_Id</p>
-	}
-}
+<table class="uk-table uk-table-hover uk-table-small uk-table-divider uk-table-justify">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Website</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in organizations) {
+        <tr>
+            <td>@o.Organization_Id</td>
+            <td>@o.Name</td>
+            <td>@o.Website</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a class="uk-button uk-button-default" @onclick="InsertData">Insert</a>
 
 @code {
 	List<OrganizationModel> organizations;
+
+	private async Task InsertData()
+	{
+		string sql = "INSERT INTO organization (Name, Website) VALUES (@Name, @Website)";
+
+		await _data.SaveData(sql, new { Name = "Name", Website = "Website" }, _config.GetConnectionString("Default"));
+	}
 
 	protected override async Task OnInitializedAsync()
 	{
